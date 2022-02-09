@@ -1,0 +1,63 @@
+
+// definici[on de variables globales
+$ancho: 720px;
+$blue: #4285F4;
+$green: #33D374;
+$black: #030303;
+$white: #FFFFFF;
+$fontSize1: 14px;
+
+@mixin size-btn($h, $w, $fontColor, $bkgColor, $fontSize) {
+    height: $h;
+    width: $w;
+    color: $fontColor;
+    background-color: $bkgColor;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: $fontSize;
+    padding: 2px 10px;
+    margin: 4px;
+}
+
+
+.btn{
+    border: 0;
+    border-radius: 4px;
+    @include size-btn(40px, 150px,  $white, $blue, $fontSize1);
+}
+
+
+    /*&-red{
+        background-color: $red;
+        color: $white;
+    }
+
+    &-blue{
+        background-color: $blue;
+        color: $white;
+    }
+
+    &-big{
+        @include size-btn(80px, 190px )
+    }*/
+
+ 
+    
+    .box_uno {
+      background-color: $blue;
+      width: $ancho/2;
+    }
+    .box_dos {
+      background-color: $green;
+      width: ($ancho/2)-50;
+    }
+    .box_tres {
+      background-color: $blue;
+      width: ($ancho/2)+50;
+    }
+    .box_cuatro {
+      background-color: $green;
+      width: ($ancho/7)*2;
+    }
+     p{
+       @extend .box_cuatro
+     }
